@@ -1,0 +1,129 @@
+#logo {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.logo-wrap {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color: #a0b0ee;
+    background-color: lighten(#2a54f5, 25%);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    display: none;
+
+    @media (min-width: 992px) {
+        display: block;
+    }
+}
+
+canvas {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#enter-btn {
+    position: absolute;
+    z-index: 999;
+    bottom: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hvr-btn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*  Button Styling */
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1px;
+    overflow: hidden;
+    font-size: 11px;
+    transition: color .5s;
+}
+
+.hvr-btn span {
+    display: block;
+    background-color: #2a54f5;
+    transition: all .2s ease-in-out;
+}
+
+.hvr-btn span:nth-child(odd) {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+}
+
+.hvr-btn span:nth-child(even) {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+}
+
+/* Custom Border Default Positioning */
+
+.hvr-btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+}
+
+.hvr-btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+}
+
+.hvr-btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+}
+
+.hvr-btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+}
+
+/* Custom Border Hover Effect */
+
+.hvr-btn:hover {
+    color: #2a54f5;
+}
+
+.hvr-btn:hover span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.hvr-btn:hover span:nth-child(2) {
+    top: 0;
+    right: 0;
+    transition-delay: .2s;
+}
+
+.hvr-btn:hover span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    transition-delay: .4s;
+}
+
+.hvr-btn:hover span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transition-delay: .6s;
+}

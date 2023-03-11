@@ -1,0 +1,94 @@
+section.sidebar {
+    height: 100%;
+    width: 300px;
+    background-color: #5071f7cb;
+    position: absolute;
+    right: -320px;
+    top: 0;
+    z-index: 99;
+    transition: right .5s;
+    padding: 10px;
+    color: white;
+
+    &:hover {
+        right: -10%;
+    }
+
+    &::after {
+        content: "Gallery";
+        display: block;
+        height: 30px;
+        width: 100px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: #2a54f5;
+        position: absolute;
+        left: -21%;
+        bottom: 50%;
+        z-index: 90;
+        transform: rotate(-90deg);
+        letter-spacing: 5px;
+        text-align: center;
+        .bounce;
+    }
+
+    @media (min-width: 483px) {
+        right: -350px;
+    }
+
+    @media (min-width:600px) and (orientation: landscape) {
+        right: -350px;
+
+        &:hover {
+            right: -18%;
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        right: -350px;
+
+        &:hover {
+            right: -10%;
+        }
+    }
+
+    .bounce {
+        animation: bounce_216 2.6s ease infinite;
+        transform-origin: 50% 50%;
+    }
+
+    @keyframes bounce_216 {
+        0% {
+            transform: translateY(0) rotate(-90deg)
+        }
+
+        7.69231% {
+            transform: translateY(0) rotate(-90deg)
+        }
+
+        15.38462% {
+            transform: translateY(0) rotate(-90deg)
+        }
+
+        30.76923% {
+            transform: translateY(-15px) rotate(-90deg)
+        }
+
+        38.46154% {
+            transform: translateY(0) rotate(-90deg)
+        }
+
+        46.15385% {
+            transform: translateY(-15px) rotate(-90deg)
+        }
+
+        61.53846% {
+            transform: translateY(0) rotate(-90deg)
+        }
+
+        100% {
+            transform: translateY(0) rotate(-90deg)
+        }
+    }
+}
